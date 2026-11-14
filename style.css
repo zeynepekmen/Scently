@@ -1,0 +1,340 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: #f7f3ed;
+    color: #40332c;
+}
+
+/* Menü */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+}
+
+.site-logo {
+    color: #49372e;
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-decoration: none;
+}
+
+.site-nav a {
+    color: #49372e;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 14px;
+}
+
+.site-nav a:hover {
+    color: #a47b61;
+}
+
+/* Ana sayfa */
+.hero-section {
+    min-height: 520px;
+    padding: 80px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #e9dfd2;
+}
+
+.hero-content {
+    max-width: 520px;
+}
+
+.eyebrow {
+    color: #9b755d;
+    letter-spacing: 3px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 58px;
+    line-height: 1.15;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    display: block;
+    color: #a47b61;
+    font-style: italic;
+}
+
+.hero-content > p:not(.eyebrow) {
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #716157;
+}
+
+.hero-button,
+.compare-button {
+    display: inline-block;
+    background: #60483b;
+    color: white;
+    padding: 15px 28px;
+    text-decoration: none;
+    font: 13px Arial, sans-serif;
+    border: none;
+    cursor: pointer;
+}
+
+.hero-button:hover,
+.compare-button:hover {
+    background: #98735c;
+}
+
+/* Parfüm şişesi */
+.hero-decoration {
+    width: 230px;
+    height: 310px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.perfume-bottle {
+    position: relative;
+    width: 150px;
+    height: 210px;
+    border: 2px solid #a78b72;
+    border-radius: 35px 35px 18px 18px;
+    background: linear-gradient(135deg, #e6d4bd, #b99a7a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 15px 18px 30px #705b4825;
+}
+
+.perfume-bottle::before {
+    content: "";
+    position: absolute;
+    top: -38px;
+    width: 48px;
+    height: 38px;
+    background: #765b48;
+    border-radius: 5px 5px 0 0;
+}
+
+.perfume-bottle span {
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #60483b;
+}
+
+/* Tanıtım */
+.intro-section,
+.about-section {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.intro-section h2,
+.about-section h2 {
+    font-size: 36px;
+    font-weight: normal;
+    margin-bottom: 18px;
+}
+
+.intro-section span,
+.about-section span {
+    font: 15px/1.8 Arial, sans-serif;
+    color: #796c63;
+}
+
+/* Parfüm kartları */
+.perfume-section {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.section-heading span {
+    color: #796c63;
+    font-family: Arial, sans-serif;
+}
+
+.perfume-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 45px auto 0;
+}
+
+.perfume-card {
+    padding: 20px;
+    background: #eee7de;
+    transition: transform 0.3s;
+}
+
+.perfume-card:hover {
+    transform: translateY(-8px);
+}
+
+.perfume-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    background: #e9dfd2;
+    margin-bottom: 20px;
+}
+
+.perfume-card h3 {
+    font-size: 19px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.perfume-card p {
+    color: #92745f;
+    font: 12px Arial, sans-serif;
+    letter-spacing: 1px;
+}
+
+/* Karşılaştırma */
+.comparison-section {
+    padding: 75px 10%;
+    background: #eee7de;
+    text-align: center;
+}
+
+#comparison-form {
+    max-width: 650px;
+    margin: 45px auto 0;
+    padding: 35px;
+    background: #faf8f4;
+    border: 1px solid #e2d6c9;
+}
+
+.perfume-selection {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+    text-align: left;
+}
+
+.form-group label,
+.criteria-group label {
+    display: block;
+    margin-bottom: 10px;
+    font: 13px Arial, sans-serif;
+}
+
+select,
+input {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 22px;
+    border: 1px solid #d7c8b9;
+    background: white;
+    color: #49372e;
+    font-family: Arial, sans-serif;
+}
+
+.criteria-group {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.criteria-group h3 {
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.criteria-group p {
+    font: 13px Arial, sans-serif;
+    color: #796c63;
+    margin-bottom: 25px;
+}
+
+#comparison-result {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #faf8f4;
+    line-height: 2;
+    font-family: Arial, sans-serif;
+}
+
+/* Alt bilgi */
+.site-footer {
+    background: #49372e;
+    color: #f7f3ed;
+    text-align: center;
+    padding: 25px;
+    font: 12px Arial, sans-serif;
+    letter-spacing: 1px;
+}
+
+/* Mobil görünüm */
+@media (max-width: 750px) {
+    .perfume-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .perfume-card img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 650px) {
+    .site-header,
+    .hero-section {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .site-nav a {
+        margin: 0 8px;
+        font-size: 12px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .perfume-selection {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #comparison-form {
+        padding: 22px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .perfume-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
