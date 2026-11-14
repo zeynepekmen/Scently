@@ -1,2 +1,0 @@
-# Scently
-Perfume Comparison Website
